@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   # resources :bookings
-  resources :flats, only: [:index]
+  resources :flats, only: [:index, :new]
 
 end

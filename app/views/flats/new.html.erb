@@ -1,0 +1,19 @@
+<div class="expand-lg">
+  <div class="text-center">
+    <div class="container-fluid">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h3 class="maintext">Upload your cozy pet flat</h3>
+          <%= simple_form_for (@flat) do |f| %>
+            <%= f.input :title %>
+            <%= f.input :address %>
+            <%= f.input :price %>
+            <%= f.input :description %>
+            <%= f.input :pet_min_size %>
+            <%= f.input :pet_max_size %>
+            <%= f.input :photo, as: :file %>
+            <%= f.submit class: 'btn btn-primary' %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
