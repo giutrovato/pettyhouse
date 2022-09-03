@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :bookings
-  resources :flats
+  # resources :bookings
+  resources :flats, only: [:index]
 
 end
