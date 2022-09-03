@@ -1,0 +1,15 @@
+<div>
+  <%= @flat.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+    <h1><%= @flat.address %></h1>
+    <h2><%= @flat.price %></h2>
+    <h2><%= @flat.description %></h2>
+    <h2><%= @flat.pet_min_size %></h2>
+    <h2><%= @flat.pet_max_size %></h2>
+</div>
+<%= simple_form_for [@flat] do |f| %>
+  <%# <%= f.input :start_day, as: :date, html: true %>
+  <%# <%= f.input :end_day, as: :date, html: true %>
+  <%= f.submit "Book"  %>
+<% end %>

@@ -10,7 +10,7 @@
             <%= f.input :description %>
             <%= f.input :pet_min_size %>
             <%= f.input :pet_max_size %>
-            <%= f.input :photo, as: :file %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             <%= f.submit class: 'btn btn-primary' %>
           <% end %>
       </div>
