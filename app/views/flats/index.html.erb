@@ -5,11 +5,11 @@
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="...">
+            <%= cl_image_tag flat.photos.first.key, height: 300, width: 400, crop: :fill %>
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Description</h5>
+              <h5 class="card-title"><%= flat.title %></h5>
               <p class="card-text"><%= flat.description %></p>
               <p><%= flat.address %></p>
               <p><%= flat.price %> €</p>

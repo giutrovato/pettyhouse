@@ -1,1 +1,178 @@
 // Specific CSS for your home-page
+body {
+  margin: 0;
+  line-height: normal;
+}
+.dashiconspets-div {
+  position: absolute;
+  top: 0;
+  left: 1440px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.main-text-b,
+.rectangle-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.home-background {
+  background-image: url(asset_path('dog.jpg'));
+  background-position: center center;
+  height: 100vh;
+}
+
+.rectangle-div {
+  background-color: #d9d9d9;
+  width: 1440px;
+  height: 1034px;
+}
+.main-text-b {
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+}
+.main-text-div {
+  position: absolute;
+  top: 259px;
+  left: 335px;
+  width: 815px;
+  height: 66px;
+  color: #d9d9d9;
+}
+.rectangle-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1460px;
+  height: 1034px;
+  object-fit: cover;
+}
+
+.secondary-title-div1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-weight: 500;
+  display: inline-block;
+}
+.secondary-title-div {
+  position: absolute;
+  top: 353px;
+  left: 309px;
+  width: 919px;
+  height: 42px;
+  font-size: 32px;
+}
+.rectangle-div1 {
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  background-color: #fc3463;
+  height: 191px;
+}
+.group-div1,
+.pettyhouse-div,
+.rectangle-div1 {
+  position: absolute;
+  width: 339px;
+}
+.pettyhouse-div {
+  top: 86px;
+  left: 0;
+  display: inline-block;
+  height: 61px;
+}
+.group-div1 {
+  top: 112px;
+  left: 560px;
+  height: 191px;
+  text-align: center;
+  font-size: 80px;
+  font-family: Ramaraja;
+}
+.button-div1,
+.rectangle-div2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.rectangle-div2 {
+  background-color: #fc3463;
+}
+.button-div1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+.button-div {
+  position: absolute;
+  top: 0;
+  left: 413px;
+  border-radius: 0 30px 30px 0;
+  width: 207px;
+  height: 50px;
+  overflow: hidden;
+}
+.placeholder-div1,
+.rectangle-div3 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+.rectangle-div3 {
+  width: 100%;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+}
+.placeholder-div1 {
+  width: 95.17%;
+  right: 2.42%;
+  left: 2.42%;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+.placeholder-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 30px 0 0 30px;
+  width: 413px;
+  height: 50px;
+  overflow: hidden;
+  text-align: left;
+  color: #9b9a9a;
+}
+.search-bar-div {
+  position: absolute;
+  top: 445px;
+  left: 420px;
+  width: 620px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+}
+.group-div {
+  position: relative;
+  width: 100%;
+  height: 1034px;
+  text-align: left;
+  font-size: 50px;
+  color: #fff;
+  font-family: Inter;
+}
