@@ -21,6 +21,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 
 gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
+
 gem 'faker'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
