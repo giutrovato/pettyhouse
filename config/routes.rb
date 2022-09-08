@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   # resources :bookings
   resources :flats, only: [:index, :new, :create, :show]
+  resources :bookings
 
 end
