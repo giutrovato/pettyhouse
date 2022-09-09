@@ -1,16 +1,9 @@
-<div class="group-div">
-  <div class="dashiconspets-div"></div>
-  <div class="rectangle-div home-background"></div>
-  <div class="main-text-div">
-    <b class="main-text-b">Hello! Is your Pet ready to move ? </b>
-  </div>
-  <div class="secondary-title-div">
-    <div class="secondary-title-div1">
-      Finding a place for you and your pet, has never been easier!
-    </div>
-  </div>
-  <div class="group-div1">
-    <div class="rectangle-div1"></div>
-    <div class="pettyhouse-div">Pettyhouse</div>
+<% content_for(:navbar_class, "navbar-home") %>
+
+<div class="banner">
+  <div class="banner-content text-center">
+    <h1><strong>OMG,</strong> DID YOU HEAR THAT ?</h1>
+      <p>It's never been simpler to find a place for you and your pet !</p>
+      <%= link_to "Explore Now! ", new_user_session_path, class: "btn bt-lg btn-primary" %>
   </div>
 </div>
