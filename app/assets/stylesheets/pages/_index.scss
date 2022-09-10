@@ -1,2 +1,35 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.btn-primary {
+  border-radius: 8px;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 0;
+}
+
+.card-title {
+  font-size: large;
+  margin-bottom: 30px;
+}
+
+img {
+  background-size: cover;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.card-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+#search-form {
+  margin: 8px auto;
+  max-width: 540px;
+}

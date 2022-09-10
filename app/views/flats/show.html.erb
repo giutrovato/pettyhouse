@@ -8,8 +8,4 @@
     <h2><%= @flat.pet_min_size %></h2>
     <h2><%= @flat.pet_max_size %></h2>
 </div>
-<%= simple_form_for [@flat] do |f| %>
-  <%# <%= f.input :start_day, as: :date, html: true %>
-  <%# <%= f.input :end_day, as: :date, html: true %>
-  <%= f.submit "Book"  %>
-<% end %>
+<%= link_to "Book Now!", new_booking_path %>
