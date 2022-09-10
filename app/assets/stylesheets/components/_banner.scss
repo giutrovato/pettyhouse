@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), image-url("Peyyhouse.jpg");
+  background-image: image-url("Pettyhouse1.jpg");
   background-size: cover;
   padding-top: 200px;
   }
@@ -14,10 +14,11 @@
     margin-bottom: 10px;
   }
 
-  p {
-    font-size: 23px;
+  .slogan {
+    font-size: 25px;
     font-weight: lighter;
     margin-bottom: 40px;
+    color:white;
   }
 
   .btn {
@@ -27,4 +28,56 @@
 
   .btn-primary {
     border-radius: 8px;
+  }
+
+  .glow {
+    text-align: center;
+  font-size: 4em;
+  margin: 20px 0 20px 0;
+  cursor:pointer;
+  transition: all 0.5s;
+  }
+
+  .glow:nth-child(1) {
+    font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  animation: red 1.5s ease-in-out infinite alternate;
+  font-weight:700;
+  }
+
+  .glow:nth-child(1):hover {
+    color: #fc3463;
+    animation: none;
+  }
+
+  .glow:nth-child(2) {
+    color: #228DFF;
+ font-family: 'Ubuntu', sans-serif;
+ font-weight:700;
+  }
+
+  .glow:nth-child(2):hover {
+    animation: blue 1.5s ease-in-out infinite alternate;
+  }
+
+  .glow:hover {
+    color: #ffffff;
+  }
+
+  @keyframes red{
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
+  }
+
+  @keyframes blue{
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
   }
