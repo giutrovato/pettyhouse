@@ -12,13 +12,13 @@
     <ul class="navbar-nav me-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link"  %>
+          <%= link_to "Home", root_path, class: "nav-link"  %>
         </li>
         <li class="nav-item">
-          <%= link_to "Flats", "#", class: "nav-link" %>
+          <%= link_to "Flats", flats_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Become a Host", "#", class: "nav-link" %>
+          <%= link_to "Become a Host", new_booking_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://i.pinimg.com/236x/f2/e0/80/f2e080c7d758bef20ecc897450cec463.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
