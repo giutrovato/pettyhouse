@@ -25,13 +25,23 @@ images = [
   'https://image.architonic.com/pro2-3/20167621/modern-doors-moderne-innentueren-raumhohe-tueren-flat-verkehrswei-01-pro-b-arcit18.jpg'
 
 ] # create an array of 10 urls
-
+flat_names = ["Barcelona",
+  "Madrid",
+  "Valencia",
+  "Seville",
+  "Granada",
+  "Granada",
+  "Bilbao",
+  "Malaga",
+  "Toledo",
+  "Zaragoza"
+]
 10.times do  |i|
 
   flat = Flat.new(
     address: Faker::Address.full_address,
     price: rand(30..50),
-    title: Faker::Config.locale = :es,
+    title: flat_names[i],
     description: Faker::Quote.yoda,
     pet_min_size: rand(2..8),
     pet_max_size: rand(9..17)
