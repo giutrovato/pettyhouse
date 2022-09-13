@@ -8,6 +8,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
     "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.9.1",
     "stimulus": "^3.1.0",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
