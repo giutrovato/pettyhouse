@@ -8,6 +8,11 @@
   padding-top: 200px;
   }
 
+  .nav-link {
+    padding-right: 400px;
+    color: #fff;
+  }
+
   h1 {
     font-weight: bold;
     font-size: 38px;
@@ -21,7 +26,7 @@
     color:white;
   }
 
-  .btn {
+  .buttonhome {
     padding: 15px 50px;
     font-weight: bolder;
   }
@@ -32,17 +37,17 @@
 
   .glow {
     text-align: center;
-  font-size: 4em;
-  margin: 20px 0 20px 0;
-  cursor:pointer;
-  transition: all 0.5s;
+    font-size: 4em;
+    margin: 20px 0 20px 0;
+    cursor:pointer;
+    transition: all 0.5s;
   }
 
   .glow:nth-child(1) {
     font-family: 'Ubuntu', sans-serif;
-  color: #fff;
-  animation: red 1.5s ease-in-out infinite alternate;
-  font-weight:700;
+    color: #fff;
+    animation: red 1.5s ease-in-out infinite alternate;
+    font-weight:700;
   }
 
   .glow:nth-child(1):hover {
@@ -52,8 +57,8 @@
 
   .glow:nth-child(2) {
     color: #228DFF;
- font-family: 'Ubuntu', sans-serif;
- font-weight:700;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:700;
   }
 
   .glow:nth-child(2):hover {
