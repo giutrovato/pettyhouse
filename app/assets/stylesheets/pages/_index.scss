@@ -8,11 +8,14 @@
 .card {
   border-radius: 8px;
   padding: 0;
+  background-color: transparent;
+  box-shadow: 3px 3px 5px black ;
 }
 
 .card-title {
   font-size: large;
   margin-bottom: 30px;
+  font-weight: bolder;
 }
 
 img {
@@ -31,5 +34,15 @@ img {
 
 #search-form {
   margin: 8px auto;
+  margin-top: 20px;
+  margin-bottom: 35px;
   max-width: 540px;
+}
+
+.buttonsearch {
+  margin-left: 25px;
+}
+
+.form-control {
+  border-radius: 10px;
 }
