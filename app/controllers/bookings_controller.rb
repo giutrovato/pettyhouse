@@ -2,11 +2,11 @@ class BookingsController < ApplicationController
     def create
       @booking = Booking.new(booking_params)
       @booking.user = current_user
-      @flat = Flats.find(params[:flat_id])
+      @booking = Booking.find(params[:booking_id])
       @booking.flat = @flat
       @booking.total_price = @flat.price_day * (@booking.end_day - @booking.start_day)
       if @booking.save
-        flash.notice = "Booking has been made"
+        flash.notice = "Has made a new booking!"
         redirect_to booking_path(@booking)
       else
         render :new

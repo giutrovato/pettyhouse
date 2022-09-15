@@ -1,7 +1,14 @@
+<div class="container">
+    <h1 class="text-center"> Hello this is bookings index!</h1>
+      <%= form_tag bookings_path, class: "d-flex justify-content-center", id: "search-form", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "See your bookings here!"
+        %>
+      <% end %>
+
+</div>
 <% @bookings.each do |booking| %>
-  <h1><%= booking.confirmation_status %></h1>
-  <h2><%= booking.total_price %></h2>
-  <h2><%= booking.start_date %></h2>
-  <h2><%= booking.end_date %></h2>
-  <h2><%= booking.flat %></h2>
-  <% end %>
+  <p><%= booking %></p>
+<% end %>
