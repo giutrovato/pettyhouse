@@ -1,13 +1,13 @@
 <div class="container">
-    <h1 class="text-center"> Hello this is flat index!</h1>
+    <h1 class="text-center glow"> OMG! Here are the flats available </h1>
 
-      <%= form_tag flats_path, class: "d-flex justify-content-center", id: "search-form", method: :get do %>
+      <%= form_tag flats_path, class: "d-flex justify-content-center searchbar", id: "search-form", method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
           placeholder: "Find a flat"
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= submit_tag "Search", class: "btn btn-primary buttonsearch" %>
       <% end %>
   <div class="row justify-content-around">
     <% @flats.each do |flat| %>
@@ -25,7 +25,7 @@
               </div>
               <div class="d-flex align-items-center justify-content-between">
                 <h3 class="m-0"><%= flat.price %> € / Month</h3>
-                <%= link_to "Rent it ", flat_path(flat), class: "btn bt-lg btn-primary" %>
+                <%= link_to "Rent it ", flat_path(flat), class: "btn btn-primary" %>
               </div>
             </div>
           </div>
