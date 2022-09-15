@@ -6,7 +6,7 @@ puts "Destroying users..."
 User.destroy_all
 puts "Creating users..."
 test_user = User.create(email: "test@gmail.com", password: "123123")
-puts "Üsers created!"
+puts "Users created!"
 
 # 2. Flats:
 puts "Destroying flats..."
