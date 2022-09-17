@@ -9,7 +9,7 @@
             <%= f.input :price %>
             <%= f.input :description %>
             <%# <%= f.input :pet_min_size %>
-            <%= f.input :pet_min_size, collection: ['Small', 'Medium', 'Large'] %>
+            <%= f.input :pet_max_size, collection: ['small', 'medium', 'large'] %>
             <%# <%= f.input :pet_max_size %>
             <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             <%= f.submit class: 'btn btn-primary' %>

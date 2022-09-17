@@ -31,6 +31,18 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
   end
 
+  def destroy
+    @flat = Flat.find(params[:id])
+    @flat.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to flat_path(@flat)
+  end
+
+  def edit
+    @flat = Flat.find(params[:id])
+  end
+
   private
 
   def article_params
