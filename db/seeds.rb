@@ -54,7 +54,7 @@ description = [
 
   flat = Flat.new(
     address: Faker::Address.full_address,
-    price: rand(30..50),
+    price: rand(900..1500),
     title: flat_names[i],
     description: description[i],
     pet_min_size: rand(2..8),
