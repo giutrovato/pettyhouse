@@ -24,7 +24,7 @@
                 <p class="card-description"><%= flat.address %></p>
               </div>
               <div class="d-flex align-items-center justify-content-between">
-                <h3 class="m-0"><%= flat.price %> € / Month</h3>
+                <h3 class="m-0"><%= flat.price.truncate %> € / Month</h3>
                 <%= link_to "Rent it ", flat_path(flat), class: "btn btn-primary" %>
               </div>
             </div>

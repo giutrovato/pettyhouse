@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
       @booking.user = current_user
       @booking = Booking.find(params[:booking_id])
       @booking.flat = @flat
-      @booking.total_price = @flat.price_day * (@booking.end_day - @booking.start_day)
+      @booking.total_price = @flat.price.truncate_day * (@booking.end_day - @booking.start_day)
       if @booking.save
         flash.notice = "Has made a new booking!"
         redirect_to booking_path(@booking)

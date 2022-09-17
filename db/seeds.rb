@@ -36,13 +36,27 @@ flat_names = ["Barcelona",
   "Toledo",
   "Zaragoza"
 ]
+
+description = [
+  "My apartment was robbed and everything was replaced with exact replicas. I told my roommate and he said 'Do I know you?",
+  "My apartment is infested with koala bears. It's the cutest infestation ever. Way better than cockroaches. When I turn on the light, a bunch of koala bears scatter, but I don't want them too. I'm like, hey, hold on fellows, lemme hold one of you and feed you a leaf.",
+  "My apartment complex isn't. In fact, it's rather simple.",
+  "Spain is like a loft apartment over a really great party.",
+  "I don't know how to put this but I'm kind of a big deal. People know me. I'm very important. I have many leather-bound books and my apartment smells of rich mahogany.",
+  "I don't want to achieve immortality through my work. I want to achieve immortality through not dying. I don't want to live on in the hearts of my countrymen. I want to live on in my apartment.",
+  "For every year past the age of 27, you need to take another step toward commitment somewhere in your life. Instead of freelancing, you get a staff job. Instead of renting, you buy. Fine, instead of couch-surfing, you rent.",
+  "12% of people marry because they are completely in love. 88% of people marry just so they are then liable for only half of their rent.",
+  "I think of birth as the search for a larger apartment.",
+  "I sold my house this week. I got a pretty good price for it. But it made my landlord mad as hell."
+]
+
 10.times do  |i|
 
   flat = Flat.new(
     address: Faker::Address.full_address,
     price: rand(30..50),
     title: flat_names[i],
-    description: Faker::Quote.yoda,
+    description: description[i],
     pet_min_size: rand(2..8),
     pet_max_size: rand(9..17)
   )
