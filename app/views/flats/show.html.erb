@@ -31,26 +31,13 @@
             Select your date
           </div>
           <div class="card-body">
-              <%= form_with model: Booking.new, authenticity_token: true do |f| %>
-            <%= f.date_field :start_date,
-              data: {
-                controller: "flatpickr",
-                mode: "range",
-                flatpickr_date_format: "d-m-Y",
-                flatpickr_min_date: Time.zone.now,
-                # inline: true,
-                enableTime: true,
-                minTime: "09:00",
-                maxTime: "22:00"
-                # position: "auto"
-              },
-              style: "width:230px; text-align:center"
-            %>
-            <%= yield %>
-            <p></p>
-              <%= link_to "Reserve ", bookings_path(@edit_booking), class: "btn btn-primary" %>
-            <% end %>
+          <%= simple_form_for [@flat, @booking] do |f| %>
+            <%= f.input :start_date, as: :date, input_html: {type: :date} %>
+            <%= f.input :end_date, as: :date, input_html: {type: :date} %>
+            <%= f.submit class: 'btn btn-primary' %>
+          <% end %>
           </div>
         </div>
+
   </div>
 </div>

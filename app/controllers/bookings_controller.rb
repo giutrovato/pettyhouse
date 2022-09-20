@@ -1,10 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_flat, only: [:create]
+
     def create
       @booking = Booking.new(booking_params)
       @booking.user = current_user
-      @booking = Booking.find(params[:booking_id])
       @booking.flat = @flat
-      @booking.total_price = @flat.price.truncate_day * (@booking.end_day - @booking.start_day)
+      # @booking.total_price = @flat.price.truncate_day * (@booking.end_day - @booking.start_day)
       if @booking.save
         flash.notice = "Has made a new booking!"
         redirect_to booking_path(@booking)
@@ -33,10 +34,14 @@ class BookingsController < ApplicationController
     private
 
     def booking_params
-      params.require(:booking).permit(:status, :total_price, :start_day, :end_day)
+      params.require(:booking).permit(:start_date, :end_date)
     end
 
     def set_booking
       @booking = Booking.find(params[:id])
+    end
+
+    def set_flat
+      @flat = Flat.find(params[:flat_id])
     end
   end
