@@ -2,10 +2,13 @@ class BookingsController < ApplicationController
   before_action :set_flat, only: [:create]
 
     def create
-      @booking = Booking.new(booking_params)
+      @booking = Booking.new()
       @booking.user = current_user
       @booking.flat = @flat
-      # @booking.total_price = @flat.price.truncate_day * (@booking.end_day - @booking.start_day)
+      dates = params[:other][:booking_dates].split(" to ")
+      @booking.start_date = Date.parse(dates[0])
+      @booking.end_date = Date.parse(dates[1])
+      @booking.total_price = @flat.price * (@booking.end_date - @booking.start_date)
       if @booking.save
         flash.notice = "Has made a new booking!"
         redirect_to booking_path(@booking)

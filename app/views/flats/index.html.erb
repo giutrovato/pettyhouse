@@ -1,3 +1,4 @@
+
 <div class="container">
     <h1 class="text-center glow"> OMG! Here are the flats available </h1>
 
@@ -8,6 +9,12 @@
           placeholder: "Find a flat"
         %>
         <%= submit_tag "Search", class: "btn btn-primary buttonsearch" %>
+<%#         <div class="control-group">
+          <label class="control control--checkbox"> 0-500
+            <input type="checkbox" value="0 AND 500" class="item_filter price"/>
+            <div class="control__indicator"></div>
+          </label>
+        </div> %>
       <% end %>
   <div class="row justify-content-around">
     <% @flats.each do |flat| %>

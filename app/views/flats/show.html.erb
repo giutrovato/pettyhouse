@@ -26,18 +26,32 @@
           </div>
         </div>
 
-        <div class="card1 w-25">
+        <div class="card w-25">
           <div class="card-header">
             Select your date
           </div>
           <div class="card-body">
           <%= simple_form_for [@flat, @booking] do |f| %>
-            <%= f.input :start_date, as: :date, input_html: {type: :date} %>
-            <%= f.input :end_date, as: :date, input_html: {type: :date} %>
+            <%= simple_fields_for :other do |o| %>
+            <%= o.text_field :booking_dates,
+            data: {
+                controller: "flatpickr",
+                mode: "range",
+                flatpickr_date_format: "Y-m-d",
+                flatpickr_min_date: Time.zone.now,
+                # inline: true,
+                enableTime: true,
+                minTime: "09:00",
+                maxTime: "22:00"
+                # position: "auto"
+              }, style: "width:230px; text-align:center" %>
+              <% end %>
+              <h1></h1>
+              <p></p>
+              <p></p>
             <%= f.submit class: 'btn btn-primary' %>
           <% end %>
           </div>
         </div>
-
   </div>
 </div>
