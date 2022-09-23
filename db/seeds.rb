@@ -51,17 +51,16 @@ description = [
 ]
 
 address = [
-  "Suite 894 3913 Boyd Estates, Trompland, CO 66307-4088",
-  "Visitación de la Encina 14, Cespedosa De Tormes, Salamanca 37750",
-  "Estrela 15, Suances, Cantabria 39340",
-  "Cercas Bajas 52, Sabadell, Barcelona 08200",
-  "Castelao 46, Villaralbo, Zamora 49159",
-  "Avda. Andalucía 12, Haro, La Rioja 26200",
-  "Extramuros 56, Valdelaguna, Madrid 28391",
-  "Extramuros 5, Nuevo Baztán, Madrid 28514",
-  "Camiño Ancho 99, Buenavista, Salamanca 37789",
-  "Avda. Alameda Sundheim 55, Albalate De Cinca, Huesca 22534",
-  "C/ Pablo Iglesias 56, Viniegra De Abajo, La Rioja 26325"
+  "Visitación de la Encina 14, No:2, Salamanca 37750",
+  "Estrela 15, No:34, Cantabria 39340",
+  "Cercas Bajas 52, No:8, Barcelona 08200",
+  "Castelao 46, No:21, Zamora 49159",
+  "Avda. Andalucía 12, No:14, La Rioja 26200",
+  "Extramuros 56, No:23, Madrid 28391",
+  "Extramuros 5, No:9, Madrid 28514",
+  "Camiño Ancho 99, No:29, Salamanca 37789",
+  "Avda. Alameda Sundheim 55, No:4, Huesca 22534",
+  "C/ Pablo Iglesias 56, No:91, La Rioja 26325"
 ]
 
 10.times do  |i|
