@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
       @booking.start_date = Date.parse(dates[0])
       @booking.end_date = Date.parse(dates[1])
       @booking.total_price = @flat.price * (@booking.end_date - @booking.start_date)
+
       if @booking.save
         flash.notice = "Has made a new booking!"
         redirect_to booking_path(@booking)
