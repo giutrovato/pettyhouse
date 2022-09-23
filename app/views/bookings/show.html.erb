@@ -13,7 +13,7 @@
         Trip details
       </div>
       <div class="card-body">
-        <h5 class="card-title"><b><h3>Confirmed: <%= ((@booking.end_date)-(@booking.start_date)).truncate %> nights in <%= @booking.flat.title %></h3></b></h5>
+        <h5 class="card-title"><b><h3>Confirmed: <%= ((@booking.end_date)-(@booking.start_date)).truncate %> night(s) in <%= @booking.flat.title %></h3></b></h5>
         <p class="card-text"> </p>
         <table width="100%">
         <tr>
@@ -27,7 +27,7 @@
           <td><footer>Check-out: <cite title="Source Title"><p> <%= @booking.end_date %> </p></cite></footer></td>
         </tr>
         <tr>
-          <td><footer>Total: <cite title="Source Title"><p> <%= @booking.total_price.truncate %> $  </p></cite></footer></td>
+          <td><footer>Total: <cite title="Source Title"><p> <%= @booking.total_price.truncate %> €  </p></cite></footer></td>
         </tr>
         <%# <loopend> %>
         <p></p>

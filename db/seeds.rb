@@ -54,11 +54,11 @@ description = [
 
   flat = Flat.new(
     address: Faker::Address.full_address,
-    price: rand(900..1500),
+    price: rand(70..300),
     title: flat_names[i],
     description: description[i],
     pet_min_size: rand(2..8),
-    pet_max_size: rand(9..17)
+    pet_max_size: rand(22..55)
   )
   photo = URI.open(images[i])
   flat.photos.attach(io: photo, filename: "flat_#{i}.jpg", content_type: 'image/jpg')
