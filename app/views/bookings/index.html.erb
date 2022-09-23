@@ -7,13 +7,12 @@
           <div class="col-md-8">
             <div class="card-body d-flex flex-column h-100 align-content-between justify-content-between">
               <div>
-                <h5 class="card-title">Confirmation number: <%= booking.flat_id %></h5>
-                  <p class="card-description">From: <%= booking.start_date %></p>
-                  <p class="card-description">To: <%= booking.end_date %></p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between">
-                <h3 class="m-0"><%  %></h3>
-                <%# price %>
+                <h2 class="card-title">Confirmation number: <%= booking.flat_id %></h2>
+                  <p class="card-description">Address: <%= booking.flat.address %></p>
+                  <p class="card-description">Check-in: <%= booking.start_date %></p>
+                  <p class="card-description">Check-out: <%= booking.end_date %></p>
+                  <p class="card-description">Total: <%= booking.total_price.truncate %> €  </p>
+                  <%= link_to "Show more..", booking_path(booking), class: "btn btn-primary" %>
               </div>
             </div>
           </div>
