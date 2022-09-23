@@ -1,6 +1,7 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700%7CWork+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
@@ -11,4 +12,9 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 font-family: 'Familjen Grotesk', sans-serif;
   src: font-url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap')
 
+}
+
+@font-face {
+font-family: 'SF Pro Display', sans-serif;
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
 }

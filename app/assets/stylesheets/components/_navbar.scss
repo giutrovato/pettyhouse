@@ -17,6 +17,11 @@
     color: black;
     font-weight: bold;
   }
+  .navbar-brand{
+    img {
+      opacity: 0
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
