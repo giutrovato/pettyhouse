@@ -38,22 +38,36 @@ flat_names = ["Barcelona",
 ]
 
 description = [
-  "My apartment was robbed and everything was replaced with exact replicas. I told my roommate and he said 'Do I know you?",
-  "My apartment is infested with koala bears. It's the cutest infestation ever. Way better than cockroaches. When I turn on the light, a bunch of koala bears scatter, but I don't want them too. I'm like, hey, hold on fellows, lemme hold one of you and feed you a leaf.",
-  "My apartment complex isn't. In fact, it's rather simple.",
-  "Spain is like a loft apartment over a really great party.",
-  "I don't know how to put this but I'm kind of a big deal. People know me. I'm very important. I have many leather-bound books and my apartment smells of rich mahogany.",
-  "I don't want to achieve immortality through my work. I want to achieve immortality through not dying. I don't want to live on in the hearts of my countrymen. I want to live on in my apartment.",
-  "For every year past the age of 27, you need to take another step toward commitment somewhere in your life. Instead of freelancing, you get a staff job. Instead of renting, you buy. Fine, instead of couch-surfing, you rent.",
-  "12% of people marry because they are completely in love. 88% of people marry just so they are then liable for only half of their rent.",
-  "I think of birth as the search for a larger apartment.",
-  "I sold my house this week. I got a pretty good price for it. But it made my landlord mad as hell."
+  "Modern Apartment w/ Heating + Gym. My modern 1-bedroom apartment has everything you need for your spain trip. The unit comes with heating, a washer, and a dryer. During your stay, you can also enjoy using a convenient gym. Our Airbnb is within walking distance to several popular restaurants. An ideal base to explore Spain.",
+  "Modern Apartment w/ Wi-Fi + Kitchen. Stay in this modern apartment and live like a true local in Spain. We're within walking distance to shops. Our rental comes with 2 bedrooms, and a kitchen that you're free to use any time. Wi-Fi, Netflix, free coffee and tea -- we've got everything you need.",
+  "Luxurious Guest suite w/ Self Check-in + Pool. Want to visit Spain without breaking the bank? We have exactly what you're looking for. Our luxurious guest suite comes with studio, pool, self check-in, laptop-friendly workspace, and a crib, and we're within walking distance to night clubs.",
+  "Luxurious Guest suite w/ Wi-Fi + Hot Tub. Thinking about visiting Spain? I have a studio guest suite that will be perfect for your stay. This luxurious rental comes with amenities such as Wi-Fi, self check-in, and free parking. Our hot tub is yours to enjoy, as well. If you want to go to parks, we're within walking distance.",
+  "Peaceful Guest suite w/ Wi-Fi + Hot Tub. Parks in Spain will make this a vacation to remember, and my peaceful studio guest suite comes complete with hot tub. The Wi-Fi, self check-in, and free parking will make you wish you could stay even longer. If you rent my Airbnb, I know you'll have a great stay in Spain.",
+  "Comfortable Guest suite w/ Wi-Fi + Gym. Stay in this comfortable guest suite and live like a true local in Spain. We're within walking distance to parks. Our rental comes with studio, and a gym that you're free to use any time. Wi-Fi, self check-in, a coffee maker -- we've got everything you need.",
+  "Glamorous Apartment w/ Self Check-in + Indoor Fireplace. Want to visit Spain without breaking the bank? We have exactly what you're looking for. Our glamorous apartment comes with 3 bedrooms, indoor fireplace, self check-in, and a coffee maker, and we're within walking distance to parks.",
+  "Rustic Apartment w/ Heating + Living Room. Thinking about visiting Spain? I have a 1-bedroom apartment that will be perfect for your stay. This rustic rental comes with amenities such as heating and a coffee maker. Our living room is yours to enjoy, as well. If you want to go to train routes, we're within walking distance..",
+  "Rare Apartment w/ Self Check-in + Pool. Restaurants in Spain will make this a vacation to remember, and my rare 1-bedroom apartment comes complete with pool. The self check-in and laptop-friendly workspace will make you wish you could stay even longer. If you rent my Airbnb, I know you'll have a great stay in Spain.",
+  "Charming Apartment w/ a Washer + Indoor Fireplace. My charming 1-bedroom apartment has everything you need for your Spain trip. The unit comes with a washer, a dryer, and Wi-Fi. During your stay, you can also enjoy using a convenient indoor fireplace. Our Airbnb is within walking distance to several popular bars. An ideal base to explore Spain."
+]
+
+address = [
+  "Suite 894 3913 Boyd Estates, Trompland, CO 66307-4088",
+  "Visitación de la Encina 14, Cespedosa De Tormes, Salamanca 37750",
+  "Estrela 15, Suances, Cantabria 39340",
+  "Cercas Bajas 52, Sabadell, Barcelona 08200",
+  "Castelao 46, Villaralbo, Zamora 49159",
+  "Avda. Andalucía 12, Haro, La Rioja 26200",
+  "Extramuros 56, Valdelaguna, Madrid 28391",
+  "Extramuros 5, Nuevo Baztán, Madrid 28514",
+  "Camiño Ancho 99, Buenavista, Salamanca 37789",
+  "Avda. Alameda Sundheim 55, Albalate De Cinca, Huesca 22534",
+  "C/ Pablo Iglesias 56, Viniegra De Abajo, La Rioja 26325"
 ]
 
 10.times do  |i|
 
   flat = Flat.new(
-    address: Faker::Address.full_address,
+    address: address[i],
     price: rand(70..300),
     title: flat_names[i],
     description: description[i],
