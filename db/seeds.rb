@@ -5,7 +5,7 @@ require "open-uri"
 puts "Destroying users..."
 User.destroy_all
 puts "Creating users..."
-test_user = User.create(email: "test@gmail.com", password: "123123")
+test_user = User.create(email: "test@gmail.com", password: "123123", first_name: "Test", last_name: "Test")
 puts "Users created!"
 
 # 2. Flats:
