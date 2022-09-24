@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   end
   resources :bookings, except: [:create]
 
+  resources :pets, only: [:show, :new, :create]
+
+  get "my_profile", to: "pages#my_profile"
 end

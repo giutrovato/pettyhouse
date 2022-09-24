@@ -9,15 +9,19 @@
 .card {
   border-radius: 8px;
   padding: 0;
-  background-color: transparent;
+  background-color: white;
   box-shadow: 3px 3px 5px black ;
+}
+
+.flat-banner {
+  background-color: white;
 }
 
 .card1 {
   max-height : 200px;
   border-radius: 8px;
   padding: 0;
-  background-color: transparent;
+  background-color: white;
   box-shadow: 3px 3px 5px black ;
   position: sticky;
   top: 20px;
