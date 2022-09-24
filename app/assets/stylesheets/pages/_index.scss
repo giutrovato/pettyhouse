@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
 .btn-primary {
   border-radius: 8px;
 }
@@ -11,6 +12,17 @@
   background-color: transparent;
   box-shadow: 3px 3px 5px black ;
 }
+
+.card1 {
+  max-height : 200px;
+  border-radius: 8px;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: 3px 3px 5px black ;
+  position: sticky;
+  top: 20px;
+}
+
 
 .card-title {
   font-size: large;

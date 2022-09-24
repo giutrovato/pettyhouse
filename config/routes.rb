@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :flats, only: [:index, :new, :create, :show]
-  resources :bookings
+  resources :flats do
+    resources :bookings, only: [:create]
+  end
+  resources :bookings, except: [:create]
 
 end

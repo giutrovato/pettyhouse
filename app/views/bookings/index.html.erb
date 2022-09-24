@@ -1,14 +1,22 @@
 <div class="container">
-    <h1 class="text-center"> Hello this is bookings index!</h1>
-      <%= form_tag bookings_path, class: "d-flex justify-content-center", id: "search-form", method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "See your bookings here!"
-        %>
-      <% end %>
-
+    <h1 class="text-center glow"> Your Bookings! </h1>
+  <div class="row justify-content-around">
+    <% @bookings.each do |booking| %>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-20">
+            <div class="card-body d-flex flex-column h-100 align-content-between justify-content-between">
+              <div>
+                <b><h2 class="card-title">Confirmation number: <%= booking.flat_id %></h2></b>
+                  <h5 class="card-description"><b><%= ((booking.end_date)-(booking.start_date)).truncate %> nights in </b><i><%= booking.flat.address %></i></h5>
+                  <h5 class="card-description"><b>Check-in: </b><%= booking.start_date %> / <b>Check-out: </b><%= booking.end_date %></h5>
+                  <%# <p class="card-description"><b>Total: <%= booking.total_price.truncate €  </b></p> %>
+                  <%= link_to "Details..", booking_path(booking), class: "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-<% @bookings.each do |booking| %>
-  <p><%= booking %></p>
-<% end %>
