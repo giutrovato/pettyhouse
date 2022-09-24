@@ -1,5 +1,5 @@
 <%# <%= link_to "Book Now!", new_booking_path %>
-<div class="flat-banner">
+<div class="flat-banner text-center">
   <h1><%= @flat.title %></h1>
   <h2><%= @flat.address %></h2>
 </div>
@@ -20,7 +20,7 @@
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p><%= @flat.description %></p>
-              <footer><cite title="Source Title"><p>Max pet weight allowed: <%= @flat.pet_max_size %> lb </p></cite></footer>
+              <footer><cite title="Source Title"><p>Pet type allowed: <%= @flat.pet_type %> </p></cite></footer>
               <footer><cite title="Source Title"><p> <%= @flat.price.truncate %> € per night.</p></cite></footer>
             </blockquote>
           </div>

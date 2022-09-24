@@ -22,8 +22,8 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://i.pinimg.com/564x/a9/b2/fa/a9b2fa33a02e957f7cf28ad97efda244.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "My Profile", my_profile_path, class: "dropdown-item" %>
+            <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

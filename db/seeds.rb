@@ -63,6 +63,11 @@ address = [
   "C/ Pablo Iglesias 56, No:91, La Rioja 26325"
 ]
 
+pet_type = [
+  "Cat",
+  "Dog"
+]
+
 10.times do  |i|
 
   flat = Flat.new(
@@ -70,8 +75,7 @@ address = [
     price: rand(70..300),
     title: flat_names[i],
     description: description[i],
-    pet_min_size: rand(2..8),
-    pet_max_size: rand(22..55)
+    pet_type: pet_type[i],
   )
   photo = URI.open(images[i])
   flat.photos.attach(io: photo, filename: "flat_#{i}.jpg", content_type: 'image/jpg')

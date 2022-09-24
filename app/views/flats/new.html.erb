@@ -1,20 +1,27 @@
-<div class="expand-lg">
-  <div class="text-center">
-    <div class="container-fluid">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+<html>
+<head>
+<style>
+  .card {
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+  <div class="card text-center w-75 mx-auto mp-auto margin-auto mb-5">
+    <div class="">
+      <div class="card-header">
         <h3 class="maintext">Upload your cozy pet flat</h3>
           <%= simple_form_for (@flat) do |f| %>
             <%= f.input :title %>
             <%= f.input :address %>
             <%= f.input :price %>
             <%= f.input :description %>
-            <%# <%= f.input :pet_min_size %>
-            <%= f.input :pet_max_size, collection: ['small', 'medium', 'large'] %>
-            <%# <%= f.input :pet_max_size %>
+            <%= f.input :pet_type, collection: ['small', 'medium', 'large'] %>
             <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             <%= f.submit class: 'btn btn-primary' %>
           <% end %>
       </div>
     </div>
   </div>
-</div>
+</body>
+</html>
