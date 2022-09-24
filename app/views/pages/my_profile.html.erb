@@ -1,9 +1,9 @@
 <h1>profile</h1>
 <p><%= current_user.first_name %> <%= current_user.last_name %></p>
-<% @pets.each do |pet| %>
-  <p><%= pet.name %></p>
-  <p><%= pet.breed %></p>
-  <%= link_to "edit pet", edit_pet_path(pet) %>
-<% end %>
+  <% @pets.each do |pet| %>
+    <p><%= pet.name %></p>
+    <p><%= pet.breed %></p>
+    <%= link_to "edit pet", edit_pet_path(pet) %>
+  <% end %>
 
 <%= link_to "edit profile", edit_user_registration_path %>

@@ -1,8 +1,10 @@
-<div class="expand-lg">
-  <div class="text-center">
-    <div class="container-fluid">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <h3 class="maintext">Upload your pet info</h3>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+      <div class="form-inputs">
+        <h3 class="maintext text-center">Upload your pet info</h3>
+        <div class="text-center">
           <%= simple_form_for (@pet) do |f| %>
             <%= f.input :name %>
             <%= f.input :breed %>
@@ -10,6 +12,7 @@
             <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             <%= f.submit class: 'btn btn-primary' %>
           <% end %>
+        </div>
       </div>
     </div>
   </div>

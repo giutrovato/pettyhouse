@@ -21,8 +21,8 @@
             <div class="card-body d-flex flex-column h-100 align-content-between justify-content-between">
               <div>
                 <h5 class="card-title"><%= flat.title %></h5>
-                <%# <p class="card-text"><%= flat.description %>
                 <p class="card-description"><%= flat.address %></p>
+                <p class="card-text">Pet type allowed: <%= flat.pet_type %>
               </div>
               <div class="d-flex align-items-center justify-content-between">
                 <h3 class="m-0"><%= flat.price.truncate %> € per night.</h3>

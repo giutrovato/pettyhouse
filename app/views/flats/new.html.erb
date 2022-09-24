@@ -1,7 +1,15 @@
-<div class="expand-lg">
-  <div class="text-center">
-    <div class="container-fluid">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+<html>
+<head>
+<style>
+  .card {
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+  <div class="card text-center w-75 mx-auto mp-auto margin-auto mb-5">
+    <div class="">
+      <div class="card-header">
         <h3 class="maintext">Upload your cozy pet flat</h3>
           <%= simple_form_for (@flat) do |f| %>
             <%= f.input :title %>
@@ -15,4 +23,5 @@
       </div>
     </div>
   </div>
-</div>
+</body>
+</html>
