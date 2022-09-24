@@ -70,8 +70,7 @@ address = [
     price: rand(70..300),
     title: flat_names[i],
     description: description[i],
-    pet_min_size: rand(2..8),
-    pet_max_size: rand(22..55)
+    size: rand(2..8),
   )
   photo = URI.open(images[i])
   flat.photos.attach(io: photo, filename: "flat_#{i}.jpg", content_type: 'image/jpg')
