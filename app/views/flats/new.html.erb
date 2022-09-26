@@ -16,7 +16,14 @@
             <%= f.input :address %>
             <%= f.input :price %>
             <%= f.input :description %>
-            <%= f.input :pet_type, collection: ['small', 'medium', 'large'] %>
+            <div class="peticons container text-center">
+            <%= f.input :pet_type, class: "peticons", :as => :check_boxes, collection: [
+            "#{image_tag('Cat.jpg')}".html_safe,
+            "#{image_tag('Dog_S.jpg')}".html_safe,
+            "#{image_tag('Dog_M.jpg')}".html_safe,
+            "#{image_tag('Dog_L.jpg')}".html_safe,
+            ] %>
+            </div>
             <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             <%= f.submit class: 'btn btn-primary' %>
           <% end %>
