@@ -17,11 +17,11 @@
             <%= f.input :price %>
             <%= f.input :description %>
             <div class="peticons container text-center">
-            <%= f.input :pet_type, class: "peticons", :as => :check_boxes, collection: [
-            "#{image_tag('Cat.jpg')}".html_safe,
-            "#{image_tag('Dog_S.jpg')}".html_safe,
-            "#{image_tag('Dog_M.jpg')}".html_safe,
-            "#{image_tag('Dog_L.jpg')}".html_safe,
+            <%= f.input :pet_type, class: "peticons", include_blank: false, include_hidden: false, :as => :check_boxes, collection: [
+            ["#{image_tag('Cat.jpg')}".html_safe, "Cat"],
+            ["#{image_tag('Dog_S.jpg')}".html_safe, "Dog_S",],
+            ["#{image_tag('Dog_M.jpg')}".html_safe, "Dog_M",],
+            ["#{image_tag('Dog_L.jpg')}".html_safe, "Dog_L",],
             ] %>
             </div>
             <%= f.input :photos, as: :file, input_html: { multiple: true } %>

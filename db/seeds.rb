@@ -65,7 +65,9 @@ address = [
 
 pet_type = [
   "Cat",
-  "Dog"
+  "Dog_S",
+  "Dog_M",
+  "Dog_L"
 ]
 
 10.times do  |i|
@@ -75,7 +77,7 @@ pet_type = [
     price: rand(70..300),
     title: flat_names[i],
     description: description[i],
-    pet_type: pet_type[i],
+    pet_type: pet_type.sample,
   )
   photo = URI.open(images[i])
   flat.photos.attach(io: photo, filename: "flat_#{i}.jpg", content_type: 'image/jpg')
