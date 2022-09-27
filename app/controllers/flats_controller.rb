@@ -19,6 +19,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
+    @flat.pet_type = params[:flat][:pet_type].join(",")
     @flat.user = current_user
     if @flat.save
       redirect_to flat_path(@flat)
@@ -51,6 +52,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:title, :address, :price, :description, :pet_type, photos: [])
+    params.require(:flat).permit(:title, :address, :price, :description, pet_type: [], photos: [])
   end
 end

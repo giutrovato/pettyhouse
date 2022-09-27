@@ -5,7 +5,7 @@ require "open-uri"
 puts "Destroying users..."
 User.destroy_all
 puts "Creating users..."
-test_user = User.create(email: "test@gmail.com", password: "123123")
+test_user = User.create(email: "test@gmail.com", password: "123123", first_name: "Test", last_name: "Test")
 puts "Users created!"
 
 # 2. Flats:
@@ -65,7 +65,9 @@ address = [
 
 pet_type = [
   "Cat",
-  "Dog"
+  "Dog_S",
+  "Dog_M",
+  "Dog_L"
 ]
 
 10.times do  |i|
@@ -75,7 +77,7 @@ pet_type = [
     price: rand(70..300),
     title: flat_names[i],
     description: description[i],
-    pet_type: pet_type[i],
+    pet_type: pet_type.sample,
   )
   photo = URI.open(images[i])
   flat.photos.attach(io: photo, filename: "flat_#{i}.jpg", content_type: 'image/jpg')
