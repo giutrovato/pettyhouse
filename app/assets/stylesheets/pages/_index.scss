@@ -4,13 +4,28 @@
 .btn-primary {
   border-radius: 8px;
   text-decoration-color: white;
+  text-decoration: aliceblue;
+}
+
+.btn-dark{
+  border-radius: 10px;
+  background-color:#fc3463;
+  border-color: white;
+  margin-left: 25px;
+}
+
+.buttonrent{
+  border-radius: 8px;
+  text-decoration-color: white;
+  text-decoration: rgb(34, 119, 193);
 }
 
 .card {
   border-radius: 8px;
   padding: 0;
-  background-color: white;
-  box-shadow: 3px 3px 5px black ;
+  background-color: #686363;
+  box-shadow: 3px 3px 5px rgb(79, 78, 78) ;
+  border-color: white;
 }
 
 .flat-banner {
