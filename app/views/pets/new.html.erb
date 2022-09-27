@@ -8,8 +8,13 @@
           <%= simple_form_for (@pet) do |f| %>
             <%= f.input :name %>
             <%= f.input :breed %>
-            <%= f.input :size, collection: ['small', 'medium', 'large'] %>
-            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+            <%= f.input :pet_type, class: "peticons", include_blank: false, include_hidden: false, :as => :check_boxes, collection: [
+            ["#{image_tag('Cat.jpg')}".html_safe, "Cat"],
+            ["#{image_tag('Dog_S.jpg')}".html_safe, "Dog_S",],
+            ["#{image_tag('Dog_M.jpg')}".html_safe, "Dog_M",],
+            ["#{image_tag('Dog_L.jpg')}".html_safe, "Dog_L",],
+            ] %>
+            <%= f.input :photo, as: :file %>
             <%= f.submit class: 'btn btn-primary' %>
           <% end %>
         </div>

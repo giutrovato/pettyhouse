@@ -1,3 +1,7 @@
 <h2>Pet info</h2>
 <p><%= @pet.name %></p>
 <p><%= @pet.breed %></p>
+
+<% @pet.pet_type.split(",").each do |pet_type| %>
+<%= image_tag pet_type, class: "peticons" %>
+<% end %>
