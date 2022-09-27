@@ -1,15 +1,21 @@
-<div class="expand-lg">
-  <div class="text-center">
-    <div class="container-fluid">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <h3 class="maintext">Upload your pet info</h3>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-login">
+        <h2>Edit your pet info</h2>
           <%= simple_form_for (@pet) do |f| %>
             <%= f.input :name %>
             <%= f.input :breed %>
-            <%= f.input :size, collection: ['small', 'medium', 'large'] %>
-            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-            <%= f.submit class: 'btn btn-primary' %>
+            <%= f.input :pet_type, class: "peticons", include_blank: false, include_hidden: false, :as => :check_boxes, collection: [
+            ["#{image_tag('Cat.jpg')}".html_safe, "Cat"],
+            ["#{image_tag('Dog_S.jpg')}".html_safe, "Dog_S",],
+            ["#{image_tag('Dog_M.jpg')}".html_safe, "Dog_M",],
+            ["#{image_tag('Dog_L.jpg')}".html_safe, "Dog_L",],
+            ] %>
+            <%= f.input :photo, as: :file %>
+            <%= f.button :submit, "Update pet info", class: "btn btn-primary" %>
           <% end %>
+          <%= link_to "Back", :back %>
       </div>
     </div>
   </div>

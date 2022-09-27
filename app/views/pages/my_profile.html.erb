@@ -1,9 +1,81 @@
-<h1>profile</h1>
-<p><%= current_user.first_name %> <%= current_user.last_name %></p>
-  <% @pets.each do |pet| %>
-    <p><%= pet.name %></p>
-    <p><%= pet.breed %></p>
-    <%= link_to "edit pet", edit_pet_path(pet) %>
-  <% end %>
-
-<%= link_to "edit profile", edit_user_registration_path %>
+<html>
+<head>
+<style>
+  .card {
+    margin-top: 30px;
+  }
+  .card-header {
+    padding: 8px, 16px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+      <h1 class="text-center glow"> Hey you! Yes you, introduce yourself! </h1>
+    <div class="card text-center w-50 mx-auto mp-auto margin-auto mb-5 row justify-content-around">
+      <div class="">
+        <div class="card-header card-footer text-muted">
+          Profile info:
+        </div>
+        <div class="card-body">
+          <table width="100%">
+           <tr>
+              <td><%= cl_image_tag @current_user.photo.key, width: 400, height: 300, crop: :fill %></td>
+          </tr>
+          <tr>
+            <td><footer>Full name: <cite title="Source Title"><p> <%= current_user.first_name %> <%= current_user.last_name %> </p></cite></footer></td>
+          </tr>
+          <tr>
+            <td><footer>Email address: <cite title="Source Title"><p> <%= current_user.email %> </p></cite></footer></td>
+          </tr>
+          <tr>
+            <td><footer>Bio: <cite title="Source Title"><p> <%= current_user.biography %></p></cite></footer></td>
+          </tr>
+          <p></p>
+        </table>
+          <%= link_to "edit profile", edit_user_registration_path, class: "btn btn-primary" %>
+        </div>
+        <div class="card-footer text-muted">
+          © 2022 Pettyhouse, Inc.
+        </div>
+      </div>
+    </div>
+    <div class="card text-center w-50 mx-auto mp-auto margin-auto mb-5">
+      <div class="">
+        <div class="card-header card-footer text-muted">
+          Pet info:
+        </div>
+        <div class="card-body">
+          <table width="100%">
+            <% @pets.each do |pet| %>
+              <tr>
+                <% if pet.photo.key %>
+                  <td><%= cl_image_tag(pet.photo.key, width: 400, height: 300, crop: :fill) %></td>
+                <% end %>
+              </tr>
+              <tr>
+                <td><footer>Name: <cite title="Source Title"><p> <%= pet.name %></p></cite></footer></td>
+              </tr>
+              <tr>
+                <td><footer>Breed: <cite title="Source Title"><p> <%= pet.breed %></p></cite></footer></td>
+              </tr>
+              <tr>
+                <td><% @pet.pet_type.split(",").each do |pet_type| %>
+                  <%= image_tag pet_type, class: "peticons" %>
+                  <% end %></td>
+              </tr>
+              <tr>
+                <td><%= link_to "edit pet info", edit_pet_path(pet), class: "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+          <p></p>
+          </table>
+        </div>
+        <div class="card-footer text-muted">
+          © 2022 Pettyhouse, Inc.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
