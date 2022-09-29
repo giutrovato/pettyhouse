@@ -1,12 +1,14 @@
+<div>
+  <h1 class="glow">Edit your pet info</h1>
+</div>
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
       <div class="form-login">
-        <h2>Edit your pet info</h2>
           <%= simple_form_for (@pet) do |f| %>
             <%= f.input :name %>
             <%= f.input :breed %>
-            <%= f.input :pet_type, class: "peticons", include_blank: false, include_hidden: false, :as => :check_boxes, collection: [
+            <%# <%= f.input :pet_type, class: "peticons", include_blank: false, include_hidden: false, :as => :check_boxes, collection: [
             ["#{image_tag('Cat.jpg')}".html_safe, "Cat"],
             ["#{image_tag('Dog_S.jpg')}".html_safe, "Dog_S",],
             ["#{image_tag('Dog_M.jpg')}".html_safe, "Dog_M",],
