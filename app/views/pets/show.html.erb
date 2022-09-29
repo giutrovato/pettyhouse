@@ -2,6 +2,9 @@
 <p><%= @pet.name %></p>
 <p><%= @pet.breed %></p>
 
-<% @pet.pet_type.split(",").each do |pet_type| %>
-<%= image_tag pet_type, class: "peticons" %>
+<%# <% @pet.pet_type.split(",").each do |pet_type| %>
+<%# <%= image_tag pet_type, class: "peticons" %>
 <% end %>
+
+
+<%# <%= link_to "Book Now!", new_booking_path %>

@@ -19,21 +19,24 @@
         </div>
         <div class="card-body">
           <table width="100%">
-           <tr>
-              <td><%= cl_image_tag @current_user.photo.key, width: 400, height: 300, crop: :fill %></td>
-          </tr>
-          <tr>
-            <td><footer>Full name: <cite title="Source Title"><p> <%= current_user.first_name %> <%= current_user.last_name %> </p></cite></footer></td>
-          </tr>
-          <tr>
-            <td><footer>Email address: <cite title="Source Title"><p> <%= current_user.email %> </p></cite></footer></td>
-          </tr>
-          <tr>
-            <td><footer>Bio: <cite title="Source Title"><p> <%= current_user.biography %></p></cite></footer></td>
-          </tr>
-          <p></p>
-        </table>
+            <tr>
+              <% if current_user.photo.key %>
+                <td><%= cl_image_tag current_user.photo.key, width: 400, height: 300, crop: :fill %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <td><footer>Full name: <cite title="Source Title"><p> <%= current_user.first_name %> <%= current_user.last_name %> </p></cite></footer></td>
+            </tr>
+            <tr>
+              <td><footer>Email address: <cite title="Source Title"><p> <%= current_user.email %> </p></cite></footer></td>
+            </tr>
+            <tr>
+              <td><footer>Bio: <cite title="Source Title"><p> <%= current_user.biography %></p></cite></footer></td>
+            </tr>
+            <p></p>
+          </table>
           <%= link_to "edit profile", edit_user_registration_path, class: "btn btn-primary" %>
+          <%= link_to "add your pet", new_pet_path, class: "btn btn-primary" %>
         </div>
         <div class="card-footer text-muted">
           © 2022 Pettyhouse, Inc.
@@ -59,11 +62,11 @@
               <tr>
                 <td><footer>Breed: <cite title="Source Title"><p> <%= pet.breed %></p></cite></footer></td>
               </tr>
-              <tr>
+              <%# <tr>
                 <td><% @pet.pet_type.split(",").each do |pet_type| %>
-                  <%= image_tag pet_type, class: "peticons" %>
-                  <% end %></td>
-              </tr>
+                  <%# <%= image_tag pet_type, class: "peticons" %>
+                  <%# <% end %>
+              <%# </tr> %>
               <tr>
                 <td><%= link_to "edit pet info", edit_pet_path(pet), class: "btn btn-primary" %></td>
               </tr>
