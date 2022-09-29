@@ -13,7 +13,7 @@ class PetsController < ApplicationController
     # @pet.pet_type = params[:flat][:pet_type].join(",")
     @pet.user = current_user
     if @pet.save
-      redirect_to pet_path(@pet)
+      redirect_to my_profile_path
     else
       render :new, status: :unprocessable_entity
     end
