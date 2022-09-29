@@ -23,8 +23,11 @@
           <div class="card-body text-center">
             <blockquote class="blockquote mb-0">
               <p><%= @flat.description %></p>
-              <footer><cite title="Source Title"><p>Pet type allowed: <%= @flat.pet_type %> </p></cite></footer>
-              <footer><cite title="Source Title"><p> <%= @flat.price.truncate %> € per night.</p></cite></footer>
+            <p>Pet type allowed:  </p>
+            <% @flat.pet_type.split(",").each do |pet_type| %>
+            <%= image_tag pet_type, class: "peticons" %>
+            <% end %>
+            <p> <%= @flat.price.truncate %> € per night.</p>
             </blockquote>
           </div>
         </div>

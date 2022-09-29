@@ -1,7 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_flat, only: [:create]
 
-    def create
+  def create
+    if params.dig(:other, :booking_dates).empty?
+      redirect_to flat_path(@flat)
+    else
       @booking = Booking.new()
       @booking.user = current_user
       @booking.flat = @flat
@@ -14,9 +17,11 @@ class BookingsController < ApplicationController
         flash.notice = "Has made a new booking!"
         redirect_to booking_path(@booking)
       else
-        render :new
+        render "flats#show"
+        # render :new
       end
     end
+  end
 
     def index
       @bookings = current_user.bookings

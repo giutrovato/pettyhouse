@@ -47,7 +47,10 @@
               <div>
                 <h5 class="card-title"><%= flat.title %></h5>
                 <p class="card-description"><%= flat.address %></p>
-                <p class="card-text">Pet type allowed: <%= flat.pet_type %>
+                <%# <p class="card-text">Pet type allowed: </p> %>
+                <% flat.pet_type.split(",").each do |pet_type| %>
+                <%= image_tag pet_type, class: "peticons" %>
+                <% end %>
               </div>
               <div class="d-flex align-items-center justify-content-between">
                 <h3 class="m-0"><%= flat.price.truncate %> € per night.</h3>
