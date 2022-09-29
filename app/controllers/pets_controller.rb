@@ -10,7 +10,7 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.new(pet_params)
-    @pet.pet_type = params[:flat][:pet_type].join(",")
+    # @pet.pet_type = params[:flat][:pet_type].join(",")
     @pet.user = current_user
     if @pet.save
       redirect_to pet_path(@pet)
