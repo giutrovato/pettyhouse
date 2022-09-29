@@ -7,10 +7,12 @@
 </style>
 </head>
 <body>
+  <div>
+    <h1 class="glow">Upload your flat</h1>
+  </div>
   <div class="card text-center w-75 mx-auto mp-auto margin-auto mb-5">
     <div class="">
       <div class="card-header">
-        <h3 class="maintext">Upload your cozy pet flat</h3>
           <%= simple_form_for (@flat) do |f| %>
             <%= f.input :title %>
             <%= f.input :address %>
