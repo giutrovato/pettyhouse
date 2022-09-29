@@ -1,26 +1,26 @@
 <%# <%= link_to "Book Now!", new_booking_path %>
 <div>
-  <h1 class="glow">Get ready & rent it!!!</h1>
+  <h1 class="glow">Like it? , Rent it!</h1>
 </div>
-<div class="flat-banner text-center">
-  <h1><%= @flat.title %></h1>
-  <h2><%= @flat.address %></h2>
-</div>
-<div class="container">
-  <div class="row text-center">
-    <div class="container-fluid">
-      <div class="my-3">
+<div>
+  <div class="card">
+    <div class="text-center">
+      <h1><%= @flat.title %></h1>
+      <h2><%= @flat.address %></h2>
+    </div>
+    <div class="row text-center">
+      <div class="container-fluid">
+        <div class="my-3">
         <% @flat.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: 'show-photos' %>
         <% end %>
       </div>
-    </div>
-      <div class="d-flex justify-content-around">
+      <div class="d-flex container justify-content-around">
         <div class="card w-50 mb-5">
-          <div class="card-header">
+          <div class="card-header text-center">
             Details
           </div>
-          <div class="card-body">
+          <div class="card-body text-center">
             <blockquote class="blockquote mb-0">
               <p><%= @flat.description %></p>
               <footer><cite title="Source Title"><p>Pet type allowed: <%= @flat.pet_type %> </p></cite></footer>
@@ -28,33 +28,33 @@
             </blockquote>
           </div>
         </div>
-
         <div class="card w-25 mb-auto" style="max-width: 540px;">
-          <div class="card-header">
-            Choose your dates:
+          <div class="card-header text-center">
+            Choose your dates
           </div>
-          <div class="card-body">
-          <%= simple_form_for [@flat, @booking] do |f| %>
-            <%= simple_fields_for :other do |o| %>
-            <%= o.text_field :booking_dates,
-            data: {
-                controller: "flatpickr",
-                mode: "range",
-                flatpickr_date_format: "Y-m-d",
-                flatpickr_min_date: Time.zone.now,
-                # inline: true,
-                enableTime: true,
-                minTime: "09:00",
-                maxTime: "22:00"
-                # position: "auto"
-              }, style: "width:230px; text-align:center" %>
-              <% end %>
-              <h1></h1>
-              <p></p>
-              <p></p>
-            <%= f.submit class: 'btn btn-primary' %>
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="card-body text-center">
+              <%= simple_form_for [@flat, @booking] do |f| %>
+              <%= simple_fields_for :other do |o| %>
+              <%= o.text_field :booking_dates,
+              data: {
+                  controller: "flatpickr",
+                  mode: "range",
+                  flatpickr_date_format: "Y-m-d",
+                  flatpickr_min_date: Time.zone.now,
+                  #inline: true,
+                  enableTime: true,
+                  minTime: "09:00",
+                  maxTime: "22:00"
+                  # position: "auto"
+                }, style: "width:230px; text-align:center" %>
+                <% end %>
+              <%= f.submit class: 'btn btn-dark buttonbooking' %>
+            </div>
+          </div>
           <% end %>
-          </div>
         </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -10,8 +10,17 @@
 .btn-dark{
   border-radius: 10px;
   background-color:#fc3463;
-  border-color: white;
   margin-left: 25px;
+  border: none;
+  transition-duration: 0.2s;
+  .btn-dark:hover {
+    background-color: #fc3463;
+  }
+}
+
+.search{
+  background-color: #fc3463;
+  font-family: 'Familjen Grotesk';
 }
 
 .buttonrent{
@@ -23,7 +32,7 @@
 .card {
   border-radius: 8px;
   padding: 0;
-  background-color: #686363;
+  background-color: #adaaaa;
   box-shadow: 3px 3px 5px rgb(79, 78, 78) ;
   border-color: white;
 }
@@ -49,10 +58,15 @@
   font-weight: bolder;
 }
 
-img {
+.flat-photo {
   background-size: cover;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
+}
+
+.show-photos {
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 .card-description {
@@ -70,10 +84,33 @@ img {
   max-width: 540px;
 }
 
-.buttonsearch {
-  margin-left: 25px;
-}
-
 .form-control {
   border-radius: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item.left {
+  flex-direction: row;
+}
+
+.item.left .well {
+  width: 100%;
+  align-self: stretch;
+}
+
+.item.left .well img {
+  height: 100%;
+}
+
+.buttonbooking {
+  margin-left: 0;
+  margin-top: 20px;
 }

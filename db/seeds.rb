@@ -13,8 +13,8 @@ puts "Destroying flats..."
 Flat.destroy_all
 puts "Creating flats..."
 images = [
-  'https://www.book-a-flat.com/images/paris-salon-2.jpg',
-  'https://www.book-a-flat.com/images/paris-salon-3.jpg',
+  'https://www.thebigflatbarcelona.com/wp-content/uploads/2016/12/bigflathomebarcelona.jpg',
+  'https://barcelona-home.com/blog/wp-content/upload/2017/03/appie-955x508.jpg',
   'https://www.servereworldsystem.com/include/temps/apts/3501/mag/1.jpg',
   'https://i.pinimg.com/736x/ea/24/c3/ea24c333dc1d379b83e5d58d25fe2837.jpg',
   'https://i.pinimg.com/originals/4c/c0/3b/4cc03b2d0737730a709264a9bea1243a.jpg',
@@ -25,14 +25,17 @@ images = [
   'https://image.architonic.com/pro2-3/20167621/modern-doors-moderne-innentueren-raumhohe-tueren-flat-verkehrswei-01-pro-b-arcit18.jpg'
 
 ] # create an array of 10 urls
-flat_names = ["Barcelona",
+flat_names = [
+  "Barcelona",
   "Madrid",
   "Valencia",
-  "Seville",
+  "Sevilla",
   "Granada",
   "Granada",
+  "Ourense",
   "Bilbao",
   "Malaga",
+  "Vigo",
   "Toledo",
   "Zaragoza"
 ]
@@ -51,16 +54,16 @@ description = [
 ]
 
 address = [
-  "Visitación de la Encina 14, No:2, Salamanca 37750",
-  "Estrela 15, No:34, Cantabria 39340",
-  "Cercas Bajas 52, No:8, Barcelona 08200",
-  "Castelao 46, No:21, Zamora 49159",
-  "Avda. Andalucía 12, No:14, La Rioja 26200",
-  "Extramuros 56, No:23, Madrid 28391",
-  "Extramuros 5, No:9, Madrid 28514",
-  "Camiño Ancho 99, No:29, Salamanca 37789",
-  "Avda. Alameda Sundheim 55, No:4, Huesca 22534",
-  "C/ Pablo Iglesias 56, No:91, La Rioja 26325"
+  "Visitación de la Encina 14, No:2",
+  "Estrella 15, No:34",
+  "Cercas Bajas 52, No:8",
+  "Castelao 46, No:21",
+  "Avda. Andalucía 12, No:14",
+  "Extramuros 56, No:23",
+  "Extramuros 5, No:9",
+  "Camiño Ancho 99, No:29",
+  "Avda. Alameda Sundheim 55, No:4",
+  "C/ Pablo Iglesias 56, No:91"
 ]
 
 pet_type = [
@@ -77,8 +80,10 @@ pet_type = [
     description: description[i],
     pet_type: pet_type[i],
   )
-  photo = URI.open(images[i])
+  photo = URI.open(images.sample)
+  photo2 = URI.open(images.sample)
   flat.photos.attach(io: photo, filename: "flat_#{i}.jpg", content_type: 'image/jpg')
+  flat.photos.attach(io: photo2, filename: "flat_#{i+1}.jpg", content_type: 'image/jpg')
   flat.user = test_user
   flat.save
 end

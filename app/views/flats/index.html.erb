@@ -1,42 +1,42 @@
 
 <div class="container">
-    <h1 class="text-center glow"> OMG! Here are the flats available </h1>
+    <h1 class="text-center glow"> OMG! Here are the available flats</h1>
 
       <%= form_tag flats_path, class: "d-flex justify-content-center searchbar", id: "search-form", method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a flat"
+          placeholder: "Find your flat here"
         %>
-        <%= submit_tag "Search", class: "btn btn-dark" %>
+        <%= submit_tag "SEARCH", class: "btn btn-dark search" %>
       <% end %>
   <div class="row justify-content-around">
     <% @flats.each do |flat| %>
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div id="<%= "#{flat.id}flat" %>" class="carousel slide" data-bs-ride= "carousel">
               <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="<%= "#{flat.id}flat" %>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <% flat.photos.drop(1).each_with_index do |photo, i| %>
+                  <button type="button" data-bs-target="<%= "#{flat.id}flat" %>" data-bs-slide-to="#{i + 1}" aria-label="Slide 2"></button>
+                <% end %>
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <%= cl_image_tag flat.photos.first.key, height: 232, width: 179, crop: :fill %>
+                  <%= cl_image_tag flat.photos.first.key, height: 232, width: 179, crop: :fill, class: 'flat-photo' %>
                 </div>
-                <div class="carousel-item">
-                  <%= cl_image_tag flat.photos.first.key, height: 232, width: 179, crop: :fill %>
-                </div>
-                <div class="carousel-item">
-                  <%= cl_image_tag flat.photos.first.key, height: 232, width: 179, crop: :fill %>
-                </div>
+                <% flat.photos.drop(1).each do |photo| %>
+                  <div class="carousel-item">
+                    <%= cl_image_tag photo.key, height: 232, width: 179, crop: :fill, class: 'flat-photo' %>
+                  </div>
+                <% end %>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="<%= "#{flat.id}flat" %>" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="<%= "#{flat.id}flat" %>"" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -51,7 +51,7 @@
               </div>
               <div class="d-flex align-items-center justify-content-between">
                 <h3 class="m-0"><%= flat.price.truncate %> € per night.</h3>
-                <%= link_to "Rent it ", flat_path(flat), class: "btn btn-dark" %>
+                <%= link_to "RENT IT ", flat_path(flat), class: "btn btn-dark" %>
               </div>
             </div>
           </div>
