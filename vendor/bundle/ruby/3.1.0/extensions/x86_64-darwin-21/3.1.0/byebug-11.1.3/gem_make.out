@@ -1,0 +1,20 @@
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+/Users/firas/.rbenv/versions/3.1.2/bin/ruby -I /Users/firas/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-3d7zy6 sitelibdir\=./.gem.20240422-67454-3d7zy6 clean
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-3d7zy6 sitelibdir\=./.gem.20240422-67454-3d7zy6
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+ld: warning: -multiply_defined is obsolete
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-3d7zy6 sitelibdir\=./.gem.20240422-67454-3d7zy6 install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20240422-67454-3d7zy6/byebug

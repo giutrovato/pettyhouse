@@ -1,0 +1,16 @@
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.13.0/ext/bootsnap
+/Users/firas/.rbenv/versions/3.1.2/bin/ruby -I /Users/firas/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.13.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-ze6cdc sitelibdir\=./.gem.20240422-67454-ze6cdc clean
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.13.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-ze6cdc sitelibdir\=./.gem.20240422-67454-ze6cdc
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: -multiply_defined is obsolete
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.13.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-ze6cdc sitelibdir\=./.gem.20240422-67454-ze6cdc install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20240422-67454-ze6cdc/bootsnap

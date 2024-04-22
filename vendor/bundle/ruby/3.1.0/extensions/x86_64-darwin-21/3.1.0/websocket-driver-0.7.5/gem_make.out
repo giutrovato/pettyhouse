@@ -1,0 +1,16 @@
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/firas/.rbenv/versions/3.1.2/bin/ruby -I /Users/firas/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-f15r9d sitelibdir\=./.gem.20240422-67454-f15r9d clean
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-f15r9d sitelibdir\=./.gem.20240422-67454-f15r9d
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: -multiply_defined is obsolete
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-f15r9d sitelibdir\=./.gem.20240422-67454-f15r9d install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20240422-67454-f15r9d
