@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: pettyhouse_production
   username: pettyhouse
   password: <%= ENV['PETTYHOUSE_DATABASE_PASSWORD'] %>
