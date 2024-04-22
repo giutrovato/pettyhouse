@@ -1,0 +1,18 @@
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+/Users/firas/.rbenv/versions/3.1.2/bin/ruby -I /Users/firas/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-u37f5o sitelibdir\=./.gem.20240422-67454-u37f5o clean
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-u37f5o sitelibdir\=./.gem.20240422-67454-u37f5o
+compiling unf.cc
+linking shared-object unf_ext.bundle
+ld: warning: -multiply_defined is obsolete
+ld: warning: ignoring duplicate libraries: '-lc++'
+
+current directory: /Users/firas/pettyhouse/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20240422-67454-u37f5o sitelibdir\=./.gem.20240422-67454-u37f5o install
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20240422-67454-u37f5o
