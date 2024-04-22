@@ -23,8 +23,6 @@ gem 'redis', '~> 4.0'
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
-gem 'nodejs', '~> 16.13', platform: :ruby
-gem 'yarn', '~> 1.22', platform: :ruby
 
 gem 'faker'
 gem 'dotenv-rails', groups: [:development, :test]
